@@ -9,9 +9,9 @@
 /// edges - number of edges in graph.
 /// matrix - adjacency matrix of graph.
 struct Graph {
-    int nodes;
-    int edges;
-    std::vector<std::vector<int>> matrix;
+    int64_t nodes;
+    int64_t edges;
+    std::vector<std::vector<int64_t>> matrix;
 };
 
 /// Function which returns graph from file.

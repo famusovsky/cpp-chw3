@@ -9,6 +9,7 @@ def generate_complete_graph(num_vertices):
     for i in range(num_vertices):
         for j in range(i+1, num_vertices):
             weight = random.randint(1, 10)
+            weight = 1
             if weight > 0:
                 edges += 1
             graph[i][j] = weight

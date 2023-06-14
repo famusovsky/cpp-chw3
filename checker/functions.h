@@ -8,10 +8,10 @@
 /// \param func - функция, время работы которой нужно измерить
 /// \param path - путь к файлу, в котором хранится исходный текст
 /// \return вектор, в котором хранятся вектора по 5 различных измерений времени работы алгоритма для каждого количества вершин
-std::vector<std::vector<int64_t>> timerForNodes(void (*func)(const std::vector<std::vector<int>>&), std::string path);
+std::vector<std::vector<int64_t>> timerForNodes(void (*func)(const std::vector<std::vector<int64_t>>&), std::string path);
 
 /// Метод, измеряющий время работы данных алгоритмов для каждого количества рёбер и записывающий результаты в файл
 /// \param func - функция, время работы которой нужно измерить
 /// \param path - путь к файлу, в котором хранится исходный текст
 /// \return вектор, в котором хранятся вектора по 5 различных измерений времени работы алгоритма для каждого количества рёбер
-std::vector<std::pair<int, std::vector<int64_t>>> timerForEdges(void (*func)(const std::vector<std::vector<int>>&), std::string path);
+std::vector<std::pair<int, std::vector<int64_t>>> timerForEdges(void (*func)(const std::vector<std::vector<int64_t>>&), std::string path);

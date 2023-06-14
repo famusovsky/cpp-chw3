@@ -11,7 +11,7 @@
 int main() {
     srand(time(nullptr));
 
-    std::vector<void (*)(const std::vector<std::vector<int>>&)> functions = {
+    std::vector<void (*)(const std::vector<std::vector<int64_t>>&)> functions = {
         &dijkstra, &floydWarshall, &bellmanFord};
 
     std::vector<std::string> names = {"dijkstra", "floydWarshall", "bellmanFord"};
@@ -27,9 +27,9 @@ int main() {
     runTimeToFileForNodes(functions, names, input_pathes, file);
     file.close();
 
-    // file = createFile("../data/output/time_edges.csv");
-    // runTimeToFileForEdges(functions, names, input_pathes, file);
-    // file.close();
+    file = createFile("../data/output/time_edges.csv");
+    runTimeToFileForEdges(functions, names, input_pathes, file);
+    file.close();
 
     return 0;
 }

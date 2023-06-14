@@ -9,7 +9,7 @@
 /// \param names - вектор имен функций
 /// \param pathes - вектор путей к файлам, в которых хранится исходный текст
 /// \param file - файл, в который нужно записать результаты
-void runTimeToFileForNodes(std::vector<void (*)(const std::vector<std::vector<int>> &)> functions,
+void runTimeToFileForNodes(std::vector<void (*)(const std::vector<std::vector<int64_t>> &)> functions,
                    std::vector<std::string> names, std::vector<std::string> pathes,
                    std::fstream &file);
 
@@ -18,7 +18,7 @@ void runTimeToFileForNodes(std::vector<void (*)(const std::vector<std::vector<in
 /// \param names - вектор имен функций
 /// \param pathes - вектор путей к файлам, в которых хранится исходный текст
 /// \param file - файл, в который нужно записать результаты
-void runTimeToFileForEdges(std::vector<void (*)(const std::vector<std::vector<int>> &)> functions,
+void runTimeToFileForEdges(std::vector<void (*)(const std::vector<std::vector<int64_t>> &)> functions,
                    std::vector<std::string> names, std::vector<std::string> pathes,
                    std::fstream &file);
 

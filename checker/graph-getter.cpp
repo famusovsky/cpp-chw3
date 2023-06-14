@@ -20,9 +20,9 @@ Graph getGraph(const std::string& path) {
     Graph graph;
     ss >> graph.nodes >> graph.edges;
     for (int i = 0; i < graph.nodes; ++i) {
-        std::vector<int> row;
+        std::vector<int64_t> row;
         for (int j = 0; j < graph.nodes; ++j) {
-            int value;
+            int64_t value;
             ss >> value;
             row.push_back(value);
         }

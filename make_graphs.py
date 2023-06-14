@@ -12,7 +12,7 @@ def generate_graphs_from_csv(csv_path):
     os.chdir(csv_dir)
     data = pd.read_csv(csv_path, sep=';', header=None)
 
-    string_sizes = list(range(100, 3001, 100))
+    graph_sizes = list(range(10, 1011, 50))
     algorithm_data = list(data[data.columns[0]])
     algorithm_results = {}
 
@@ -28,18 +28,13 @@ def generate_graphs_from_csv(csv_path):
     for algorithm_name, measurement_data in algorithm_results.items():
         plt.figure()
         for measurement_type, measurements in measurement_data.items():
-            if len(string_sizes) > 10:
-                x_ticks = range(0, len(string_sizes), 3)
-                x_tick_labels = [string_sizes[i] for i in x_ticks]
-                plt.plot(measurements, label=measurement_type)
-                plt.xticks(x_ticks, x_tick_labels)
-            else:
-                plt.plot(string_sizes, measurements, label=measurement_type)
+            plt.plot(graph_sizes, measurements, label=measurement_type)
+            plt.xticks([])
 
         file_name = csv_path.split('/')[-1]
         plt.title(
-            f'{algorithm_name} Effectiveness by String Size ({file_name})')
-        plt.xlabel('String Size')
+            f'{algorithm_name} graph effectiveness by size ({file_name})')
+        plt.xlabel('Graph Size')
         plt.ylabel('Measurement Result')
 
         plt.legend()
