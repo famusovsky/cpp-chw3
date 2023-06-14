@@ -14,7 +14,7 @@
 Через терминал из корневой директории проекта:
 
 ```zsh
-python generate.py # генерация входных данных
+python generate_graphs.py # генерация входных данных
 
 cmake . -B build # Создание папки для скомпилированного проекта
 
@@ -22,7 +22,7 @@ cd build && # Компиляция и запуск
 cmake --build . --target all && ./main &&
 cd ..
 
-python make_graphs.py ./data/output # создание графиков
+python make_diagrams.py ./data/output # создание графиков
 ```
 
 Для запуска таким образом на ПК должны быть установлен **cmake** и **python**.
