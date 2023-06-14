@@ -15,3 +15,7 @@ void floydWarshall(const std::vector<std::vector<int64_t>>& graph);
 /// Bellman-Ford algorithm for finding the shortest paths from a single node to all other nodes in a weighted graph.
 /// \param graph - adjacency matrix of the graph
 void bellmanFord(const std::vector<std::vector<int64_t>>& graph);
+
+/// A-Star algorithm for finding the shortest paths from a single node to all other nodes in a weighted graph.
+/// \param graph - adjacency matrix of the graph
+void aStar(const std::vector<std::vector<int64_t>>& graph);

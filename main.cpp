@@ -12,9 +12,9 @@ int main() {
     srand(time(nullptr));
 
     std::vector<void (*)(const std::vector<std::vector<int64_t>>&)> functions = {
-        &dijkstra, &floydWarshall, &bellmanFord};
+        &dijkstra, &floydWarshall, &bellmanFord, &aStar};
 
-    std::vector<std::string> names = {"dijkstra", "floydWarshall", "bellmanFord"};
+    std::vector<std::string> names = {"dijkstra", "floydWarshall", "bellmanFord", "aStar"};
 
     std::vector<std::string> input_pathes = {"../data/graphs/complete_",
                                              "../data/graphs/connected_", "../data/graphs/sparse_"};
